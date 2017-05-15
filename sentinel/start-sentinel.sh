@@ -1,6 +1,6 @@
 #!/bin/bash
 function leader_ip {
-  echo $(curl -s http://rancher-metadata/2015-12-19/containers/$1_$2_1/primary_ip)
+  echo $(curl -s http://rancher-metadata/2015-12-19/containers/$1-$2-1/primary_ip)
 }
 /usr/local/bin/giddyup service wait scale --timeout 120
 stack_name=`curl -s http://rancher-metadata/2015-12-19/self/stack/name`
