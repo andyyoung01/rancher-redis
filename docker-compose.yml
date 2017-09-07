@@ -1,7 +1,7 @@
 version: '2'
 services:
   redis-data:
-    image: clescot/rancher-redis:28
+    image: registry.cn-beijing.aliyuncs.com/andyyoung01/rancher-redis:3.2.0
     stdin_open: true
     volumes:
     - /data
@@ -9,7 +9,7 @@ services:
     command:
     - cat
   redis-sentinel:
-    image: clescot/rancher-redis-sentinel:3
+    image: registry.cn-beijing.aliyuncs.com/andyyoung01/rancher-redis-sentinel:4.0.1
     ports:
     - 51010:26379/tcp
     labels:
@@ -17,7 +17,7 @@ services:
     depends_on:
     - redis
   redis:
-    image: clescot/rancher-redis:28
+    image: registry.cn-beijing.aliyuncs.com/andyyoung01/rancher-redis:3.2.0
     volumes_from:
     - redis-data
     ports:

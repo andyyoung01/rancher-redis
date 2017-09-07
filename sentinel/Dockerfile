@@ -1,4 +1,4 @@
-FROM joshula/redis-sentinel
+FROM registry.cn-beijing.aliyuncs.com/andyyoung01/redis-sentinel:4.0.1
 MAINTAINER Charles Lescot <lescot.charles[@]gmail.com:>
 
 COPY giddyup /usr/local/bin/giddyup
